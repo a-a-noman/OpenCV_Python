@@ -21,3 +21,5 @@ plt.show()
 
 # Saving the image as a PNG file using OpenCV imwrite().
 cv2.imwrite('Test_Apollo-11-launch.png', rd_img)
+
+#END
