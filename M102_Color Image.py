@@ -63,4 +63,4 @@ plt.subplot(144); plt.imshow(img_mod); plt.title('Modified Image');
 
 plt.show()
 
-#END
+#CODE_END
