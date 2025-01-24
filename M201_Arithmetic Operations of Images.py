@@ -11,6 +11,18 @@ img = cv2.imread(image, cv2.IMREAD_COLOR)
 matrix_ones = np.ones((10,10), dtype = 'float64')
 print(matrix_ones)
 
+#Creating lower brightness and higher brightness images
+
+mat= np.ones(img.shape, dtype= 'uint8')*40
+img_lb= cv2.subtract(img, mat)
+img_hb= cv2.add(img, mat)
+
+# Displaying the images (original, lower brightness , higher brightness)
+plt.figure(figsize=[18,5])
+plt.subplot(131); plt.imshow(img[:, :, ::-1]);         plt.title('Original')
+plt.subplot(132); plt.imshow(img_lb[:, :, ::-1]); plt.title('Low Brightness')
+plt.subplot(133); plt.imshow(img_hb[:, :, ::-1]); plt.title('High Brightness');
+
 # Create two higher contrast images using the 'scale' option with factors of 1.1 and 1.2 (without overflow fix)
 
 contr_img_higher1  = np.ones(img.shape)*1.1
